@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title" >ConversorDePeso</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+    <div class="logo"> <!-- logo da empresa fictícia -->
+        <div class="logo.texto"></div>
+            <h1>
+            <img src="images/logoempresa2.jpg" height="100" />
+            </h1>
+    </div>
+
+    <div class="menu"> <!-- informações da empresa fictícia -->
+        <ul>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Loja</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+        </ul>
+    </div>
+    </header>
+   
+    <h1>⚖ Conversor de Unidade de Peso ⚖</h1>
+
+    <form id=ConversorPeso> <!-- opções de unidade de peso -->
+        <label for="pesoInicial"> Peso </label>
+        <select id="pesoInicial" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Kg">Kilograma</option>
+            <option value="lb">Libra</option>
+            <option value="oz">Onça</option>
+            <option value="g">Grama</option>
+        </select>
+        
+        <label for="pesoConvertido"> Peso Convertido </label>
+        <select id="pesoConvertido" required>
+            <option value="" disabled selected>Selecione...</option>
+            <option value="Kg">Kilograma</option>
+            <option value="lb">Libra</option>
+            <option value="oz">Onça</option>
+            <option value="g">Grama</option>
+        </select>
+
+        <label for="valor">Peso a ser convertido:</label> <!-- valor de entrada para a conversão -->
+        <input type="number" id="valor" step="0.001" placeholder="Ex: 400.000">
+
+        <button type="submit" id="calcular" onclick="calculaConversao(event)">Calcular</button>
+
+        <div id="resultado"></div>
+
+
+        
+        <div>
+        <label for="questão">Essa ferramenta foi útil?</label> <!-- avaliação da ferramenta -->
+        <input type="radio" id="Sim" name="avaliar" value="Sim"/>Sim
+        <input type="radio"id="Não" name="avaliar" value="Não"/>Não
+
+        <input type="button" id="btnSubmit" value="Enviar" />
+        </div>
+
+        
+        <p>
+        <fieldset>
+            <legend>Você quer receber informações por e-mail?</legend> <!-- formulário -->
+          
+            <div>
+              <input type="checkbox" id="promoções" name="promoções" />
+              <label for="scales">Quero receber promoções</label>
+            </div>
+          
+            <div>
+              <input type="checkbox" id="produtosNovos" name="produtosNovos" />
+              <label for="horns">Quero receber produtos novos</label>
+            </div>
+            <div>
+                <input type="checkbox" id="não" name="não" />
+                <label for="horns">Não, obrigado</label>
+
+                <input type="button" id="btnSubmit" value="Enviar" />
+              </div>
+          </fieldset>
+
+        <legend>Faça seu cadastro e fique por dentro das novidades</legend>
+          <label for="name">Nome Completo:</label>
+          <input type="text" id="name" name="name">
+          <label for="nascimento">Data de Nascimento:</label>
+          <input type="date" id="nascimento" name="nascimento">
+          <label for="email">Seu e-mail:</label>
+          <input type="text" id="email" name="email">
+          <input type="button" id="btnSubmit" value="Fazer Cadastro" />
+        </p>
+          
+        
+
+
+
+
+
+        
+    </form>
+    <script src="js/conversao.js"></script>
+    </form>
+</body>
+</html>
